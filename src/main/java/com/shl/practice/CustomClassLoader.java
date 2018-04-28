@@ -7,6 +7,8 @@ package com.shl.practice;
 import java.io.IOException;
 import java.io.InputStream;
 
+import org.springframework.util.Assert;
+
 /**
  * @author fufeng
  * @version $Id: CustomClassLoader.java, v 0.1 2017-11-10 下午5:53 fufeng Exp $$
@@ -30,7 +32,7 @@ public class CustomClassLoader {
             @Override
             public Class<?> loadClass(String name) throws ClassNotFoundException {
 
-                /**这段逻辑验证了执行的loadClass()不同，就表示使用了不同的ClassLoader
+                /*这段逻辑验证了执行的loadClass()不同，就表示使用了不同的ClassLoader
                 if (name != null){
                     return super.loadClass(name);
                 }*/
@@ -51,6 +53,7 @@ public class CustomClassLoader {
         };
 
         Object obj = myClassLoader.loadClass("com.shl.practice.CustomClassLoader").newInstance();
+        Assert.isTrue(obj instanceof com.shl.practice.CustomClassLoader);
         System.out.println(obj.getClass().getClassLoader());
         System.out.println(com.shl.practice.CustomClassLoader.class.getClassLoader());
         System.out.println(obj instanceof com.shl.practice.CustomClassLoader);
