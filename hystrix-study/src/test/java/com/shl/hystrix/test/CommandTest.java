@@ -8,9 +8,14 @@ import org.junit.Test;
  */
 public class CommandTest {
 	
+	/**
+	 * executeCommandWithSpecifiedIsolation 着重看
+	 */
 	@Test
 	public void test(){
 		SayHelloExtendsCommand command = new SayHelloExtendsCommand("groupKey","commandKey");
+		
+		
 		command.execute();
 	}
 }
