@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.RewardItemTypeMapper">
+  <resultMap id="BaseResultMap" type="com.entity.RewardItemType">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="reward_type" jdbcType="VARCHAR" property="rewardType" />
+    <result column="reward_desc" jdbcType="VARCHAR" property="rewardDesc" />
+    <result column="reward_name" jdbcType="VARCHAR" property="rewardName" />
+    <result column="icon_url" jdbcType="VARCHAR" property="iconUrl" />
+    <result column="effective_time" jdbcType="TIMESTAMP" property="effectiveTime" />
+    <result column="expire_time" jdbcType="TIMESTAMP" property="expireTime" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from reward_item_type
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.entity.RewardItemType" useGeneratedKeys="true">
+    insert into reward_item_type (reward_type, reward_desc, reward_name, 
+      icon_url, effective_time, expire_time, 
+      create_time, update_time)
+    values (#{rewardType,jdbcType=VARCHAR}, #{rewardDesc,jdbcType=VARCHAR}, #{rewardName,jdbcType=VARCHAR}, 
+      #{iconUrl,jdbcType=VARCHAR}, #{effectiveTime,jdbcType=TIMESTAMP}, #{expireTime,jdbcType=TIMESTAMP}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.entity.RewardItemType">
+    update reward_item_type
+    set reward_type = #{rewardType,jdbcType=VARCHAR},
+      reward_desc = #{rewardDesc,jdbcType=VARCHAR},
+      reward_name = #{rewardName,jdbcType=VARCHAR},
+      icon_url = #{iconUrl,jdbcType=VARCHAR},
+      effective_time = #{effectiveTime,jdbcType=TIMESTAMP},
+      expire_time = #{expireTime,jdbcType=TIMESTAMP},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select id, reward_type, reward_desc, reward_name, icon_url, effective_time, expire_time, 
+    create_time, update_time
+    from reward_item_type
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, reward_type, reward_desc, reward_name, icon_url, effective_time, expire_time, 
+    create_time, update_time
+    from reward_item_type
+  </select>
+  <resultMap id="BaseResultMap" type="com.RewardItemType">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="reward_type" jdbcType="VARCHAR" property="rewardType" />
+    <result column="reward_desc" jdbcType="VARCHAR" property="rewardDesc" />
+    <result column="reward_name" jdbcType="VARCHAR" property="rewardName" />
+    <result column="icon_url" jdbcType="VARCHAR" property="iconUrl" />
+    <result column="effective_time" jdbcType="TIMESTAMP" property="effectiveTime" />
+    <result column="expire_time" jdbcType="TIMESTAMP" property="expireTime" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from reward_item_type
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.RewardItemType" useGeneratedKeys="true">
+    insert into reward_item_type (reward_type, reward_desc, reward_name, 
+      icon_url, effective_time, expire_time, 
+      create_time, update_time)
+    values (#{rewardType,jdbcType=VARCHAR}, #{rewardDesc,jdbcType=VARCHAR}, #{rewardName,jdbcType=VARCHAR}, 
+      #{iconUrl,jdbcType=VARCHAR}, #{effectiveTime,jdbcType=TIMESTAMP}, #{expireTime,jdbcType=TIMESTAMP}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.RewardItemType">
+    update reward_item_type
+    set reward_type = #{rewardType,jdbcType=VARCHAR},
+      reward_desc = #{rewardDesc,jdbcType=VARCHAR},
+      reward_name = #{rewardName,jdbcType=VARCHAR},
+      icon_url = #{iconUrl,jdbcType=VARCHAR},
+      effective_time = #{effectiveTime,jdbcType=TIMESTAMP},
+      expire_time = #{expireTime,jdbcType=TIMESTAMP},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select id, reward_type, reward_desc, reward_name, icon_url, effective_time, expire_time, 
+    create_time, update_time
+    from reward_item_type
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, reward_type, reward_desc, reward_name, icon_url, effective_time, expire_time, 
+    create_time, update_time
+    from reward_item_type
+  </select>
+  <resultMap id="BaseResultMap" type="com.dada.merchant.entity.RewardItemType">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="reward_type" jdbcType="VARCHAR" property="rewardType" />
+    <result column="reward_desc" jdbcType="VARCHAR" property="rewardDesc" />
+    <result column="reward_name" jdbcType="VARCHAR" property="rewardName" />
+    <result column="icon_url" jdbcType="VARCHAR" property="iconUrl" />
+    <result column="effective_time" jdbcType="TIMESTAMP" property="effectiveTime" />
+    <result column="expire_time" jdbcType="TIMESTAMP" property="expireTime" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from reward_item_type
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.dada.merchant.entity.RewardItemType" useGeneratedKeys="true">
+    insert into reward_item_type (reward_type, reward_desc, reward_name, 
+      icon_url, effective_time, expire_time, 
+      create_time, update_time)
+    values (#{rewardType,jdbcType=VARCHAR}, #{rewardDesc,jdbcType=VARCHAR}, #{rewardName,jdbcType=VARCHAR}, 
+      #{iconUrl,jdbcType=VARCHAR}, #{effectiveTime,jdbcType=TIMESTAMP}, #{expireTime,jdbcType=TIMESTAMP}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.dada.merchant.entity.RewardItemType">
+    update reward_item_type
+    set reward_type = #{rewardType,jdbcType=VARCHAR},
+      reward_desc = #{rewardDesc,jdbcType=VARCHAR},
+      reward_name = #{rewardName,jdbcType=VARCHAR},
+      icon_url = #{iconUrl,jdbcType=VARCHAR},
+      effective_time = #{effectiveTime,jdbcType=TIMESTAMP},
+      expire_time = #{expireTime,jdbcType=TIMESTAMP},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select id, reward_type, reward_desc, reward_name, icon_url, effective_time, expire_time, 
+    create_time, update_time
+    from reward_item_type
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, reward_type, reward_desc, reward_name, icon_url, effective_time, expire_time, 
+    create_time, update_time
+    from reward_item_type
+  </select>
+</mapper>

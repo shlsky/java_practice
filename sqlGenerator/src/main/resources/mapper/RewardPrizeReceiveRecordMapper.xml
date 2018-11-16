@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.RewardPrizeReceiveRecordMapper">
+  <resultMap id="BaseResultMap" type="com.entity.RewardPrizeReceiveRecord">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="grant_id" jdbcType="BIGINT" property="grantId" />
+    <result column="prize_id" jdbcType="BIGINT" property="prizeId" />
+    <result column="receive_time" jdbcType="TIMESTAMP" property="receiveTime" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from reward_prize_receive_record
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.entity.RewardPrizeReceiveRecord" useGeneratedKeys="true">
+    insert into reward_prize_receive_record (user_id, grant_id, prize_id, 
+      receive_time, create_time, update_time
+      )
+    values (#{userId,jdbcType=BIGINT}, #{grantId,jdbcType=BIGINT}, #{prizeId,jdbcType=BIGINT}, 
+      #{receiveTime,jdbcType=TIMESTAMP}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.entity.RewardPrizeReceiveRecord">
+    update reward_prize_receive_record
+    set user_id = #{userId,jdbcType=BIGINT},
+      grant_id = #{grantId,jdbcType=BIGINT},
+      prize_id = #{prizeId,jdbcType=BIGINT},
+      receive_time = #{receiveTime,jdbcType=TIMESTAMP},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select id, user_id, grant_id, prize_id, receive_time, create_time, update_time
+    from reward_prize_receive_record
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, user_id, grant_id, prize_id, receive_time, create_time, update_time
+    from reward_prize_receive_record
+  </select>
+  <resultMap id="BaseResultMap" type="com.RewardPrizeReceiveRecord">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="grant_id" jdbcType="BIGINT" property="grantId" />
+    <result column="prize_id" jdbcType="BIGINT" property="prizeId" />
+    <result column="receive_time" jdbcType="TIMESTAMP" property="receiveTime" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from reward_prize_receive_record
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.RewardPrizeReceiveRecord" useGeneratedKeys="true">
+    insert into reward_prize_receive_record (user_id, grant_id, prize_id, 
+      receive_time, create_time, update_time
+      )
+    values (#{userId,jdbcType=BIGINT}, #{grantId,jdbcType=BIGINT}, #{prizeId,jdbcType=BIGINT}, 
+      #{receiveTime,jdbcType=TIMESTAMP}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.RewardPrizeReceiveRecord">
+    update reward_prize_receive_record
+    set user_id = #{userId,jdbcType=BIGINT},
+      grant_id = #{grantId,jdbcType=BIGINT},
+      prize_id = #{prizeId,jdbcType=BIGINT},
+      receive_time = #{receiveTime,jdbcType=TIMESTAMP},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select id, user_id, grant_id, prize_id, receive_time, create_time, update_time
+    from reward_prize_receive_record
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, user_id, grant_id, prize_id, receive_time, create_time, update_time
+    from reward_prize_receive_record
+  </select>
+  <resultMap id="BaseResultMap" type="com.dada.merchant.entity.RewardPrizeReceiveRecord">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="grant_id" jdbcType="BIGINT" property="grantId" />
+    <result column="prize_id" jdbcType="BIGINT" property="prizeId" />
+    <result column="receive_time" jdbcType="TIMESTAMP" property="receiveTime" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from reward_prize_receive_record
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.dada.merchant.entity.RewardPrizeReceiveRecord" useGeneratedKeys="true">
+    insert into reward_prize_receive_record (user_id, grant_id, prize_id, 
+      receive_time, create_time, update_time
+      )
+    values (#{userId,jdbcType=BIGINT}, #{grantId,jdbcType=BIGINT}, #{prizeId,jdbcType=BIGINT}, 
+      #{receiveTime,jdbcType=TIMESTAMP}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.dada.merchant.entity.RewardPrizeReceiveRecord">
+    update reward_prize_receive_record
+    set user_id = #{userId,jdbcType=BIGINT},
+      grant_id = #{grantId,jdbcType=BIGINT},
+      prize_id = #{prizeId,jdbcType=BIGINT},
+      receive_time = #{receiveTime,jdbcType=TIMESTAMP},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select id, user_id, grant_id, prize_id, receive_time, create_time, update_time
+    from reward_prize_receive_record
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, user_id, grant_id, prize_id, receive_time, create_time, update_time
+    from reward_prize_receive_record
+  </select>
+</mapper>

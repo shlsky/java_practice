@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <classPathEntry
+            location="/Users/songhongling/.m2/repository/mysql/mysql-connector-java/5.1.39/mysql-connector-java-5.1.39.jar"/>
+
+    <context id="context" targetRuntime="MyBatis3Simple">
+        <commentGenerator>
+            <property name="suppressAllComments" value="true"/>
+            <property name="suppressDate" value="true"/>
+        </commentGenerator>
+        <jdbcConnection connectionURL="jdbc:mysql://192.168.1.250:3307/growth?characterEncoding=utf8"
+                        driverClass="com.mysql.jdbc.Driver"
+                        password="6nvjq0_HW" userId="dev_w"/>
+
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+
+        <javaModelGenerator targetPackage="com.entity" targetProject="./src/main/java"/>
+        <sqlMapGenerator targetPackage="mapper" targetProject="./src/main/resources"/>
+        <javaClientGenerator targetPackage="com.dao" targetProject="./src/main/java"
+                             type="XMLMAPPER"/>
+        <!--<table tableName="coupon_deposit_rule" domainObjectName="CouponDepositRule">-->
+            <!--<generatedKey column="id" sqlStatement="JDBC"/>-->
+        <!--</table>-->
+        <!--<table tableName="supplier_privilege_score" domainObjectName="SupplierPrivilegeScore">-->
+            <!--<generatedKey column="id" sqlStatement="JDBC"/>-->
+        <!--</table>-->
+        <!--<table tableName="supplier_privilege_grade" domainObjectName="SupplierPrivilegeGrade">-->
+            <!--<generatedKey column="id" sqlStatement="JDBC"/>-->
+        <!--</table>-->
+        <!--<table tableName="supplier_privilege_type" domainObjectName="SupplierPrivilegeType">-->
+            <!--<generatedKey column="id" sqlStatement="JDBC"/>-->
+        <!--</table>-->
+        <!--&lt;!&ndash;&ndash;&gt;-->
+        <!---->
+        <!--<table tableName="supplier_privilege_type_rule" domainObjectName="SupplierPrivilegeTypeRule">-->
+            <!--<generatedKey column="id" sqlStatement="JDBC"/>-->
+        <!--</table>-->
+		<!--<table tableName="supplier_privilege_rule_city_relation" domainObjectName="SupplierPrivilegeRuleCityRelation">-->
+            <!--<generatedKey column="id" sqlStatement="JDBC"/>-->
+        <!--</table>-->
+		<!--<table tableName="supplier_privilege_rule_grade_relation" domainObjectName="SupplierPrivilegeRuleGradeRelation">-->
+            <!--<generatedKey column="id" sqlStatement="JDBC"/>-->
+        <!--</table>-->
+		<!--<table tableName="supplier_privilege_coupon_template" domainObjectName="SupplierPrivilegeCouponTemplate">-->
+            <!--<generatedKey column="id" sqlStatement="JDBC"/>-->
+        <!--</table>-->
+        <!--&lt;!&ndash;&ndash;&gt;-->
+        <!---->
+
+        <table tableName="reward_item_type" domainObjectName="RewardItemType">
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+        <table tableName="reward_prize_relation" domainObjectName="RewardPrizeRelation">
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+        <table tableName="reward_prize_type" domainObjectName="RewardPrizeType">
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+        <table tableName="reward_item_grant_record" domainObjectName="RewardItemGrantRecord">
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+        <table tableName="reward_prize_receive_record" domainObjectName="RewardPrizeReceiveRecord">
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+        <!-- <table tableName="supplier_privilege_notice_threshold" domainObjectName="SupplierPrivilegeNoticeThreshold">-->
+             <!--<generatedKey column="id" sqlStatement="JDBC"/>-->
+        <!-- </table>-->
+     </context>
+ </generatorConfiguration>
+
