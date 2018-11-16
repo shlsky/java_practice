@@ -23,6 +23,8 @@ public class AopJUnitTest {
 	/**
 	 * 结论：spring aop代理是代理到方法级别，当同一个类的多个方法有advice时，会生成多个代理类，也就是说内部方法间调用
 	 * 不会触发切面逻辑。
+	 *
+	 * DefaultAdvisorChainFactory ,CglibAopProxy,DynamicAdvisedInterceptor多看这三个类
 	 */
 	@Test
 	public void test(){
