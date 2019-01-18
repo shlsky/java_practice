@@ -1,0 +1,50 @@
+package com.java.exception;
+
+/**
+ * 错误码
+ * <pre>
+ *     40XXX 通用系统错误
+ *     41XXX 通用业务错误
+ *     42XXX 活动相关错误
+ *     43XXX 推广相关错误
+ *     ...
+ * </pre>
+ * Created by Caixinning on 2016/10/12.
+ */
+public enum ErrorCode {
+	
+	UNKONW_ERROR(40001, "服务器打嗝儿了，不巧被您遇上，请再试试~"), NOT_SUPPORT(40002, "Method not support"), BIND_EXCEPTION(40003, "Bind exception"), PARAM_INVALID(40004, "Invalid params"), PARAM_BIND_ERROR(40005, "Params binding error"), SYSTEM_ERROR(40006, "服务器打嗝儿了，不巧被您遇上，请再试试~"), MULI_COMMIT(40007, "操作太快了，请稍后再试！"), HYSTRIX_ERROR(40008, "hystrix default fall back"),
+	
+	BUSI_EXCEPTION(41000, "Business Exception"), DATA_NOT_EXIST(41001, "数据不存在或已被删除"), PHONE_ILLEGAL(41051, "手机号不正确"),
+	
+	ACTIVITY_NOT_FOUND(42001, "活动不存在"), ACTIVITY_NOT_ONLINE(42002, "活动暂未开启"), ACTIVITY_BEFORE_START(42003, "活动还没开始，请耐心等待"), ACTIVITY_AFTER_END(42004, "很遗憾，活动已经结束"), ACTIVITY_NOT_REAMIN(42005, "很遗憾，活动参与人数已满"), ACTIVITY_NOT_MATCH(42006, "您不满足活动参与条件"), ACTIVITY_NOT_MATCH_OLD(42007, "您是老用户，无法参加新人活动，请关注其他活动！"), ACTIVITY_EXTEND_NOT_FOUND(42008, "找不到活动信息"), ACTIVITY_COUPON_NOT_FOUND(42009, "该活动没有配置奖励"),
+	
+	ACTIVITY_NOT_JOIN(42100, "用户还未参加活动"),
+	
+	//431XX 绑定推广码
+	PROMOTE_HAS_BIND(43101, "您已经被邀请过啦！"), PROMOTE_CODE_ERROR(43102, "绑定码有误！"), PROMOTE_FAIL_OLD_USER(43103, "您是老用户，无法参加新人活动，请关注其他活动！"), //432XX 查看自己的推广账户
+	PROMOTE_ACCOUNT_DUPLICATE(43201, "已经存在推广账户，请勿重复添加"), PROMOTE_ACCOUNT_NOT_EXIST(43202, "找不到绑定码，请确认账户状态"),
+	
+	LOTTERY_NO_TICKETS(43301, "您的抽奖次数已经用光，请尝试分享或接单，获取新的抽奖机会~!"), LOTTERY_UNLUCKY(43302, "真遗憾，您没有中奖，请再试试！"), LOTTERY_NO_RATE(43303, "没有概率"), LOTTERY_MAX_TICKETS_ACQUIRE(43304, "今天不能获取更多抽奖次数"), LOTTERY_MAX_SHARE_TICKETS_ACQUIRE(43305, "今天不能获取更多分享抽奖次数"),
+	
+	
+	COUPON_EXPIRE_MSG_ERRPR(44001, "优惠券MQ数据异常"),
+	
+	ABTEST_ERR_NOT_FOUND(45001, "找不到对应的测试"),
+	
+	SPLIT_GIFT_INSTANCE_NO_ACTIVITY_CANDIDATE(46001, "没有活动可以分享"), SPLIT_GIFT_INSTANCE_ORDER_REACH_TIME_LIMIT(46002, "订单已超时，不能分享了"), SPLIT_GIFT_INSTANCE_CREATING_COUNT_REACH_LIMIT_TODAY(46003, "今日分享次数超过上限"), SPLIT_GIFT_INSTANCE_HAS_BEEN_CREATED_WITH_SUCH_ORDER(46004, "已经分享过了"), SPLIT_GIFT_INSTANCE_REACH_INSTANCE_SURVIVAL(46102, "活动已过期"), SPLIT_GIFT_INSTANCE_REACH_MAX_PARTICIPATING_USER_NUM_PER_INSTANCE(46103, "红包已被抢空"), SPLIT_GIFT_INSTANCE_REACH_MAX_TAKEN_GIFT_NUM_PER_USER_PER_DAY(46104, "您今天领取的红包已超过限制"), SPLIT_GIFT_INSTANCE_GIFT_POOL_IS_EMPTY(46105, "红包已被抢空"),
+	
+	SHARE_BONUS_ACTIVITY_HAS_ENDED(46200, "活动已结束"), SHARE_BONUS_ACTIVITY_NO_INVITE(46201, "尚未完成邀请任务"), SHARE_BONUS_ACTIVITY_BONUS_RECEIVED(46202, "已经领取该奖励"),
+	
+	NO_SECRET(47001, "商城接口缺少密钥"),
+	
+	DUPLICATE_TRANSPORTER_PHONE_REGISTER(47001, "该手机号已注册"), VALIDATE_CODE_OVER_DUE(47002, "验证码已过期,请重新获取"), VALIDATE_CODE_WRONG(47003, "验证码错误"), REGISTER_ERROR(47004, "注册失败"), BIND_INVITE_CODE_ERROR(47005, "邀请码绑定失败,请在达达骑士app重新绑定"), BIND_INVITE_CODE_REPEAT_ERROR(47006, "您已绑定过邀请码,请勿重复绑定"), BIND_INVITE_CODE_CIRCUIT_EXIST_ERROR(47007, "不可绑定已经被自己邀请骑士的邀请码"), BIND_INVITE_CODE_OVER_ONE_DAY_ERROR(47008, "您需要在注册当天内绑定邀请码"), BIND_INVITE_CODE_NOT_EXIST_ERROR(47009, "邀请码不存在"), BIND_INVITE_CODE_ALREADY_FINISH_ORDER_ERROR(47010, "您已经接过单,不能绑定邀请码"), BIND_INVITE_CODE_YOURSELF_ERROR(47011, "不能绑定自己的邀请码"), TRANSPORTER_INVITE_PRESENT_BONUS_ERROR(47012, "骑士邀请骑士活动奖励发放失败"), TRANSPORTER_INVITE_RULE_OVER_DUE(47013, "骑士邀请骑士活动已过期,绑码失败"), REWARD_NOT_EXIST(47013, "奖励不存在"), REWARD_GRANT_NOT_EXIST(47014, "奖励发放记录不存在"), REWARD_GRANT_RECEIVED(47015, "奖励已领取"), CUTPRICE_INSTANCE_EXPIRED(46300, "活动已过期"), CUTPRICE_INSTANCE_CUT_TOO_MUCH(46301, "今天参与的次数已达上限"), WITHDRAW_ACCOUNT_MAX(48001, "提现账号已达上限"), WITHDRAW_ACCOUNT_EXISTED(48002, "提现账号已存在"), WITHDRAW_ACCOUNT_NOT_EXIST(48003, "提现账号不存在"), WITHDRAW_LESS_THAN_MIN_PRICE(48004, "当前金额不足以提现"), WITHDRAW_APPLY_FAILED(48005, "提现申请失败，请稍后重试"), USER_TASK_STATUS_INVALID(48006, "用户任务状态不合法");
+	
+	public final int code;
+	public final String msg;
+	
+	ErrorCode(int code, String msg) {
+		this.code = code;
+		this.msg = msg;
+	}
+}

@@ -31,7 +31,7 @@ public class AopJUnitTest {
 	 * note:methodProxy.invokeSuper(proxy,AopProxyUtils.adaptArgumentsIfNecessary(method, args))这个在执行sayHello.say();
 	 * 时第二个接口被代理(是因为动态分派,然后走织入逻辑，第一次没走的原因是已经进intercept)
 	 *
-	 * methodProxy.invoke(proxy,AopProxyUtils.adaptArgumentsIfNecessary(method, args))
+	 * methodProxy.invoke(proxy,AopProxyUtils.adaptArgumentsIfNecessary(method, args))表示执行代理类的方法
 	 *
 	 *
 	 * CglibAopProxy 783 return this.methodProxy.invoke(this.target, this.arguments);这个决定了不能self-invocation
