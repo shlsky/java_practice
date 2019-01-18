@@ -6,12 +6,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 /**
  * Created by hongling.shl on 2018/11/16.
  */
 @SpringBootApplication
+@Configuration
 @EnableAutoConfiguration(exclude = DataSourceAutoConfiguration.class)
 @EnableAspectJAutoProxy(proxyTargetClass = true)
 public class AopTestApplication extends SpringBootServletInitializer {
