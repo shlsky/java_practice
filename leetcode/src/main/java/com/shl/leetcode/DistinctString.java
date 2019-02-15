@@ -11,7 +11,7 @@ public class DistinctString {
 	
 	public static void main(String[] args) {
 		
-		System.out.println(numDistinct("babgbag", "bag"));
+		System.out.println(numDistinct("rabbbit", "rabbit"));
 		
 	}
 	
