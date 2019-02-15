@@ -13,6 +13,7 @@
         <module>rxJava-study</module>
         <module>spark-study</module>
         <module>javaStudy</module>
+		<module>leetcode</module>
     </modules>
 	
 	<parent>

@@ -34,7 +34,7 @@ public class AopJUnitTest {
 	 * methodProxy.invoke(proxy,AopProxyUtils.adaptArgumentsIfNecessary(method, args))表示执行代理类的方法
 	 *
 	 *
-	 * CglibAopProxy 783 return this.methodProxy.invoke(this.target, this.arguments);这个决定了不能self-invocation
+	 * CglibAopProxy 738 return this.methodProxy.invoke(this.target, this.arguments);这个决定了不能self-invocation
 	 *
 	 * DefaultAdvisorChainFactory ,CglibAopProxy,DynamicAdvisedInterceptor多看这三个类
 	 */
