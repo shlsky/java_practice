@@ -11,7 +11,7 @@ package com.shl.practice;
  */
 public class ThreadLocalVariable {
 
-    public static final ThreadLocal<Long> threadLocal = new ThreadLocal<Long>(){
+    public final ThreadLocal<Long> threadLocal = new ThreadLocal<Long>(){
         @Override
         protected Long initialValue() {
             System.out.println("I am initial by thread "+Thread.currentThread().getName());
@@ -24,7 +24,7 @@ public class ThreadLocalVariable {
      *
      * @return property value of threadLocal
      */
-    public static ThreadLocal<Long> getThreadLocal() {
+    public ThreadLocal<Long> getThreadLocal() {
         return threadLocal;
     }
 }

@@ -19,15 +19,16 @@ import org.junit.Test;
  */
 public class ThreadLocalTest {
 
-    private static final ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(3, 10, 1000,
+    private static final ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(3, 3, 1000,
         TimeUnit.MILLISECONDS, new ArrayBlockingQueue<Runnable>(10), new CallerRunsPolicy());
 
     @Test
     public void test(){
+		ThreadLocalVariable threadLocalVariable = new ThreadLocalVariable();
         for (int i = 0; i < 100; i++) {
             threadPoolExecutor.submit(new Runnable() {
                 public void run() {
-                    System.out.println(ThreadLocalVariable.getThreadLocal().get());
+                    System.out.println(threadLocalVariable.getThreadLocal().get());
                 }
             });
         }

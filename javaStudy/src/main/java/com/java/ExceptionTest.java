@@ -9,11 +9,20 @@ import org.springframework.util.Assert;
 public class ExceptionTest {
 	
 	public static void main(String[] args) {
-		try {
-			Assert.notNull(null,"不能为空");
-		} catch (Exception e){
-			
-			throw new SystemException("发生异常",e);
+		System.out.println(fo(6));
+	}
+	
+	
+	public static int fo(int  n) {
+		int a1=0,a2=1,result=0;
+		if (n<2){
+			return n;
 		}
+		for(int i = 2;i<=n;i++){
+			result = a1+a2;
+			a1=a2;
+			a2=result;
+		}
+		return result;
 	}
 }
