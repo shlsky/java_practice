@@ -8,11 +8,6 @@ import com.java.aop.spring_aop.SayHello;
  */
 public class SayHelloInstance extends SayHello {
 	
-	@Override
-	public void say(){
-		
-		super.say();
-	}
 	
 	@CustomAnnotation(value = "")
 	public void say1(){
@@ -22,6 +17,6 @@ public class SayHelloInstance extends SayHello {
 	
 	public static void main(String[] args) {
 		SayHello instance = new SayHelloInstance();
-		instance.say();
+		instance.say("hello");
 	}
 }

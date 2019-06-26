@@ -1,5 +1,6 @@
 package com.java.aop.spring_aop;
 
+import com.java.model.Student;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.stereotype.Service;
 
@@ -8,16 +9,15 @@ import org.springframework.stereotype.Service;
  */
 @Service
 @EnableAspectJAutoProxy(proxyTargetClass = true)
-//@CustomAnnotation(value = "")
 public class SayHello {
 	
-	@CustomAnnotation(value = "")
-    public void say(){
-		System.out.println("say" + this.getClass());
-        say1();
+	@CustomAnnotation(value = "'say-'+#word")
+    public void say(String word){
+		System.out.println("say " + word);
     }
-	@CustomAnnotation(value = "")
-    public void say1(){
-		System.out.println("say1" + this.getClass());
-    }
+	
+	@CustomAnnotation(value = "'ajfafjaf'")
+    public void testSpel(Student student){
+		
+	}
 }

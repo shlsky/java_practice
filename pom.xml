@@ -31,66 +31,34 @@
     </properties>
 
     <dependencies>
-        <!-- Spring dependencies -->
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-core</artifactId>
-            <version>4.3.4.RELEASE</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-beans</artifactId>
-            <version>4.3.4.RELEASE</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-            <version>4.3.4.RELEASE</version>
-        </dependency>
-		<dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-test</artifactId>
-            <version>4.3.4.RELEASE</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-jdbc</artifactId>
-            <version>4.3.4.RELEASE</version>
-        </dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-aspects</artifactId>
-			<version>4.3.4.RELEASE</version>
-		</dependency>
-		
-		<dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-test</artifactId>
-            <version>1.5.3.RELEASE</version>
-        </dependency>
-		<dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-			<version>1.5.3.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
-			<version>1.5.3.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
-			<version>1.5.3.RELEASE</version>
+        </dependency>
+		<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-jpa</artifactId>
+            <version>1.11.3.RELEASE</version>
         </dependency>
 
 
         <dependency>
             <groupId>org.springframework</groupId>
-            <artifactId>spring-ibatis</artifactId>
-            <version>2.0.8</version>
+            <artifactId>spring-aspects</artifactId>
+            <version>5.0.8.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>

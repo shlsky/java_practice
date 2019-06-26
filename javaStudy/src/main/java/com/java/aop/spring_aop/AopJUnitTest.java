@@ -1,5 +1,7 @@
 package com.java.aop.spring_aop;
 
+import com.java.model.School;
+import com.java.model.Student;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -40,7 +42,7 @@ public class AopJUnitTest {
 	 */
 	@Test
 	public void test(){
-		sayHello.say();
-//		sayHello.say1();
+//		sayHello.say("hello linfeng");
+		sayHello.testSpel(new Student().setName("shl").setSchool(new School().setName("光山一高")));
 	}
 }
