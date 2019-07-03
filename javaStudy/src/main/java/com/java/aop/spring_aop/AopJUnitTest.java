@@ -39,6 +39,9 @@ public class AopJUnitTest {
 	 * CglibAopProxy 738 return this.methodProxy.invoke(this.target, this.arguments);这个决定了不能self-invocation
 	 *
 	 * DefaultAdvisorChainFactory ,CglibAopProxy,DynamicAdvisedInterceptor多看这三个类
+	 *
+	 * AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation 先执行解析advisor的逻辑，
+	 * 然后doCreateBean的过程中，执行beanPostProcesser.after逻辑，将bean转换为一个proxy。
 	 */
 	@Test
 	public void test(){
