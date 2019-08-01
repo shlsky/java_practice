@@ -1,7 +1,7 @@
 package com.java.aop.extend;
 
 import com.java.aop.spring_aop.CustomAnnotation;
-import com.java.aop.spring_aop.SayHello;
+import com.java.aop.spring_aop.SayHelloImplOne;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.config.BeanPostProcessor;
@@ -9,7 +9,7 @@ import org.springframework.beans.factory.config.BeanPostProcessor;
 /**
  * Created by hongling.shl on 2018/11/16.
  */
-public class SayHelloInstance extends SayHello implements InitializingBean,BeanPostProcessor {
+public class SayHelloInstance extends SayHelloImplOne implements InitializingBean,BeanPostProcessor {
 	
 	public static SayHelloInstance SINGLE;
 	@CustomAnnotation(value = "")
@@ -19,7 +19,7 @@ public class SayHelloInstance extends SayHello implements InitializingBean,BeanP
 	
 	
 	public static void main(String[] args) {
-		SayHello instance = new SayHelloInstance();
+		SayHelloImplOne instance = new SayHelloInstance();
 		instance.say("hello");
 	}
 	

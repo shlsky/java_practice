@@ -13,6 +13,7 @@ import org.springframework.core.annotation.AnnotationUtils;
 import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Method;
+import java.lang.reflect.Type;
 
 /**
  * Created by alan on 2018/5/28.
@@ -31,6 +32,9 @@ public class CustomAnnotationAspect {
 	
 		System.out.println(pjp.getSignature().toString()+" 前置代理");
 		System.out.println(getRediskey(pjp));
+		//获取泛型返回类型
+		Type clazz = ((MethodSignature)pjp.getSignature()).getMethod().getGenericReturnType();
+	
 		Object res=  pjp.proceed();
 		System.out.println(pjp.getSignature().toString()+" 后置代理");
 		return res;

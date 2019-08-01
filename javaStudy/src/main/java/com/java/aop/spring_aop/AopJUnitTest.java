@@ -22,7 +22,11 @@ import org.springframework.test.context.web.WebAppConfiguration;
 public class AopJUnitTest {
 	
 	@Autowired
-	private SayHello sayHello;
+	private SayHelloImplOne sayHello;
+	
+	@Autowired
+	private SayHelloImplTwo sayHelloTwo;
+	
 	
 	/**
 	 * 结论：spring aop代理是代理到方法级别，当同一个类的多个方法有advice时，会生成多个代理类，也就是说内部方法间调用
@@ -46,6 +50,9 @@ public class AopJUnitTest {
 	@Test
 	public void test(){
 //		sayHello.say("hello linfeng");
-		sayHello.testSpel(new Student().setName("shl").setSchool(new School().setName("光山一高")));
+//		sayHello.testSpel(new Student().setName("shl").setSchool(new School().setName("光山一高")));
+		
+		sayHello.testWithinAopOne();
+		sayHelloTwo.testWithinAopTwo();
 	}
 }
