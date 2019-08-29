@@ -24,7 +24,7 @@ public class SayHelloImplOne implements SayHello<Long,Object>,InitializingBean {
 	@Override
 	@CustomAnnotation(value = "'ajfafjaf'")
     public void testSpel(Student student){
-		
+		System.out.println(student);
 	}
 	
 	public void testWithinAopOne(){

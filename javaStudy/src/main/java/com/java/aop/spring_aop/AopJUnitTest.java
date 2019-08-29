@@ -50,7 +50,7 @@ public class AopJUnitTest {
 	@Test
 	public void test(){
 //		sayHello.say("hello linfeng");
-//		sayHello.testSpel(new Student().setName("shl").setSchool(new School().setName("光山一高")));
+		sayHello.testSpel(new Student().setName("shl").setSchool(new School().setName("光山一高")));
 		
 		sayHello.testWithinAopOne();
 		sayHelloTwo.testWithinAopTwo();

@@ -30,13 +30,13 @@ public class WebTTs {
 	// 合成webapi接口地址
 	private static final String WEBTTS_URL = "http://api.xfyun.cn/v1/service/v1/tts";
 	// 应用APPID（必须为webapi类型应用，并开通语音合成服务，参考帖子如何创建一个webapi应用：http://bbs.xfyun.cn/forum.php?mod=viewthread&tid=36481）
-	private static final String APPID = "****";
+	private static final String APPID = "5d4cc9c8";
 	// 接口密钥（webapi类型应用开通合成服务后，控制台--我的应用---语音合成---相应服务的apikey）
-	private static final String API_KEY = "******";
+	private static final String API_KEY = "7a81f314792ecaf38f68f0a162f65d91";
 	// 待合成文本
-	private static final String TEXT = "测试音频";
+	private static final String TEXT = "这里记录一下本人遇见这个错误的原因及处理办法";
 	// 音频编码(raw合成的音频格式pcm、wav,lame合成的音频格式MP3)
-	private static final String AUE = "raw";
+	private static final String AUE = "lame";
 	// 采样率
 	private static final String AUF = "audio/L16;rate=16000";
 	// 语速（取值范围0-100）
@@ -66,10 +66,10 @@ public class WebTTs {
 		System.out.println("占用内存大小： "+ URLEncoder.encode(TEXT, "utf-8").getBytes().length);
 		if ("audio/mpeg".equals(resultMap.get("Content-Type"))) { // 合成成功
 			if ("raw".equals(AUE)) {
-				FileUtil.save("resource\\", resultMap.get("sid") + ".wav", (byte[]) resultMap.get("body"));
+				FileUtil.save("resource", resultMap.get("sid") + ".wav", (byte[]) resultMap.get("body"));
 				System.out.println("合成 WebAPI 调用成功，音频保存位置：resource\\" + resultMap.get("sid") + ".wav");
 			} else {
-				FileUtil.save("resource\\", resultMap.get("sid") + ".mp3", (byte[]) resultMap.get("body"));
+				FileUtil.save("resource", resultMap.get("sid") + ".mp3", (byte[]) resultMap.get("body"));
 				System.out.println("合成 WebAPI 调用成功，音频保存位置：resource\\" + resultMap.get("sid") + ".mp3");
 			}
 		} else { // 合成失败
