@@ -1,0 +1,1 @@
+java -Xms256m  -Xmx512m  -javaagent:/Users/songhongling/.m2/repository/org/aspectj/aspectjweaver/1.8.11/aspectjweaver-1.8.11.jar -jar  target/javaStudy-1.0-SNAPSHOT.jar

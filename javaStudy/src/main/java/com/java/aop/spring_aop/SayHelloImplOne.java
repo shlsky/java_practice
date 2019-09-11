@@ -35,4 +35,9 @@ public class SayHelloImplOne implements SayHello<Long,Object>,InitializingBean {
 	public void afterPropertiesSet() throws Exception {
 		SayHelloImplOne.self = this;
 	}
+
+
+	public void sayAspectj(){
+		System.out.println("sayAspectj ");
+	}
 }
