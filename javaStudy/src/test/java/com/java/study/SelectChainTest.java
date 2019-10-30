@@ -1,6 +1,7 @@
-package java.com.java.study;
+package com.java.study;
 
 
+import com.google.common.base.Joiner;
 import com.google.common.collect.Lists;
 import com.java.SelectChain;
 import lombok.Getter;
@@ -58,5 +59,10 @@ public class SelectChainTest {
 		public static TestInnerModel build(Integer first, Integer second) {
 			return new TestInnerModel(first, second);
 		}
+	}
+
+	@Test
+	public void test1(){
+		System.out.println(Joiner.on("_").useForNull("*").join(Lists.newArrayList(1,"haha",null)));
 	}
 }

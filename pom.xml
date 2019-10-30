@@ -14,6 +14,7 @@
         <module>spark-study</module>
         <module>javaStudy</module>
 		<module>leetcode</module>
+        <module>aspectsweaver</module>
     </modules>
 	
 	<parent>

@@ -10,14 +10,12 @@ import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Component;
 import sun.reflect.generics.reflectiveObjects.ParameterizedTypeImpl;
 
 /**
- * java -Xms256m  -Xmx512m  -javaagent:/Users/songhongling/dada/growth-activity/docker/files/aspectjweaver-1.8.11.jar
- * -jar  target/javaStudy-1.0-SNAPSHOT.jar
+ * java -Xms256m  -Xmx512m  -javaagent:/Users/songhongling/.m2/repository/org/aspectj/aspectjweaver/1.8.11/aspectjweaver-1.8.11.jar -jar  target/javaStudy-1.0-SNAPSHOT.jar
  * @author Song Hongling
  * @date 2019/7/31
  */
