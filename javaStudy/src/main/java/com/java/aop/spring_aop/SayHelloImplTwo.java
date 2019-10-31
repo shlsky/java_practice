@@ -9,6 +9,8 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class SayHelloImplTwo implements SayHello<Student,Long> {
+
+
 	/**
 	 * 接口上的注解无法生效
 	 *
